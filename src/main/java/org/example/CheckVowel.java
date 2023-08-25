@@ -5,7 +5,7 @@ public class CheckVowel {
     public static void main(String[] args) {
 
         String string = "HEllO";
-        String regex = ".[aeiou].*";
+        String regex = ".*[aeiou].*";
 
         boolean matches = string.toLowerCase().matches(regex);
 

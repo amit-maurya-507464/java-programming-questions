@@ -1,5 +1,6 @@
 package org.example;
 
+@FunctionalInterface
 interface Adder {
     int add(int a, int b);
 }
