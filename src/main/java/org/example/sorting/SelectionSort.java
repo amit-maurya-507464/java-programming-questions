@@ -15,16 +15,19 @@ public class SelectionSort {
 
         for(int i=0; i<numbers.length; i++) {
             int min = i;
+            boolean isShift = false;
 
             for (int j=i+1; j<numbers.length; j++) {
                 if (numbers[min] > numbers[j]) {
                     min = j;
+                    isShift = true;
                 }
             }
-
-            int temp = numbers[i];
-            numbers[i] = numbers[min];
-            numbers[min] = temp;
+            if (isShift) {
+                int temp = numbers[i];
+                numbers[i] = numbers[min];
+                numbers[min] = temp;
+            }
         }
         return numbers;
     }
