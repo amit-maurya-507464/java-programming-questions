@@ -2,12 +2,16 @@ package org.example;
 
 class A {
 
+    int a = 10;
+
     void print() {
         System.out.println("Printing A");
     }
 }
 
 class B extends A{
+
+    int a = 20;
 
     void print() {
         System.out.println("Printing B");
@@ -24,6 +28,7 @@ public class Inheritance {
 
         A a = new B();
         a.print();
+        System.out.println(a.a);
     }
 
 }

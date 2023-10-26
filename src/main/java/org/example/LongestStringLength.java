@@ -31,7 +31,7 @@ public class LongestStringLength {
     }
 
     public static void printLongestStringUsingJava8(String[] strings) {
-        String string = Arrays.stream(strings).max(Comparator.comparingInt(String::length)).orElse("");
+        String string = Arrays.stream(strings).max((s, t1) -> s.length() - t1.length()).orElse("");
         System.out.println("Longest string is = " + string);
 
     }

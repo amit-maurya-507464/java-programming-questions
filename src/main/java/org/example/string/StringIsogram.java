@@ -28,10 +28,10 @@ public class StringIsogram {
     private static boolean checkIfIsogramWithJava8(String str) {
         str = str.toLowerCase();
         return str.chars()
-                .filter(Character::isLetter)
+//                .filter(Character::isLetter)
                 .distinct()
                 .count() == str.chars()
-                .filter(Character::isLetter)
+//                .filter(Character::isLetter)
                 .count();
     }
 
