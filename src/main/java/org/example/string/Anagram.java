@@ -6,6 +6,8 @@ import java.util.Map;
 
 public class Anagram {
 
+    //An anagram is a word or phrase created by rearranging the letters of another word or phrase, usually using all the original letters exactly once.
+
     public static void main(String[] args) {
 
         String string1 = "earth";

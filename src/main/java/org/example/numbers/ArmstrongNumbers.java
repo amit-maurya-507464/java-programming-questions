@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 public class ArmstrongNumbers {
 
+    //Armstrong number is a number that is equal to the sum of cubes of its digits.
+
     public static void main(String[] args) {
 
         System.out.println("Enter Number:");

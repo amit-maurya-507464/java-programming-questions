@@ -7,8 +7,18 @@ public class RemoveWhiteSpaces {
         String stringWithSpaces = "Hello World!";
 
         String stringWithoutSpaces = removeWhiteSpaces(stringWithSpaces);
+        stringWithoutSpaces = removeWhiteSpacesWithReplaceAll(stringWithSpaces);
+        stringWithoutSpaces = removeWhiteSpacesWithReplace(stringWithSpaces);
 
         System.out.println(stringWithoutSpaces);
+    }
+
+    private static String removeWhiteSpacesWithReplace(String stringWithSpaces) {
+        return stringWithSpaces.replace(" ", "");
+    }
+
+    private static String removeWhiteSpacesWithReplaceAll(String stringWithSpaces) {
+        return stringWithSpaces.replaceAll("\\s", "");
     }
 
     private static String removeWhiteSpaces(String stringWithSpaces) {

@@ -5,6 +5,8 @@ import java.util.Map;
 
 public class LongestSubstringIsogram {
 
+    //An isogram is a word that has no repeating letters or has letters that appear an equal number of times.
+
     public static void main(String[] args) {
 
         String s = "javaisaprogramminglanguage";

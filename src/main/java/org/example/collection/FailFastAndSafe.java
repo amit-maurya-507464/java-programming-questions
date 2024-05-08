@@ -7,7 +7,7 @@ public class FailFastAndSafe {
 
   public static void main(String[] args) {
     failSafeIterator();
-    failFastIterator();
+//    failFastIterator();
   }
 	
   private static void failSafeIterator() {

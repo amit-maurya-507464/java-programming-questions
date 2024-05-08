@@ -1,4 +1,8 @@
 1. Solid principle
 2. Equals and hashcode
 3. Design patterns in spring
+4. Connection pooling
+5. http connection pooling
+6. predicate
+
 

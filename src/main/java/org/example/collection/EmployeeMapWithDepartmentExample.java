@@ -44,8 +44,8 @@ public class EmployeeMapWithDepartmentExample {
         employees.add(new Employee(3, "Bob Johnson", "HR"));
         employees.add(new Employee(4, "Alice Jones", "IT"));
 
-//        Map<String, List<Employee>> departmentMap = mapEmployeesWithDepartment(employees);
-        Map<String, List<Employee>> departmentMap = mapEmployeesWithDepartmentWithStream(employees);
+        Map<String, List<Employee>> departmentMap = mapEmployeesWithDepartment(employees);
+//        Map<String, List<Employee>> departmentMap = mapEmployeesWithDepartmentWithStream(employees);
 
         // Print the result
         for (Map.Entry<String, List<Employee>> entry : departmentMap.entrySet()) {

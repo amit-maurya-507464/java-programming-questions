@@ -7,10 +7,10 @@ public class ProductOfArrayElements {
     public static void main(String[] args) {
         int[] numbers = {2, 4, 3, 2};
         int num = 2;
-        printProductOfElements(numbers);
-        printProductOfElementsExceptNumber(numbers, num);
+//        printProductOfElements(numbers);
+//        printProductOfElementsExceptNumber(numbers, num);
         printProductOfElementsUsingJava8(numbers);
-        printProductOfElementsExceptNumberUsingJava8(numbers, num);
+//        printProductOfElementsExceptNumberUsingJava8(numbers, num);
 
     }
 
