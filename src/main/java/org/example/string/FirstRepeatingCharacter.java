@@ -1,7 +1,9 @@
 package org.example.string;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
+import java.util.function.Function;
+
+import static java.util.stream.Collectors.*;
 
 public class FirstRepeatingCharacter {
     public static char findFirstRepeatingCharacter(String str) {
@@ -25,6 +27,28 @@ public class FirstRepeatingCharacter {
         } else {
             System.out.println("No repeating characters found.");
         }
+
+        //Get all repeating charaters
+//        List<Character> collect = inputString
+//                .chars()
+//                .mapToObj(i -> (char) i)
+//                .collect(groupingBy(Function.identity(), counting()))
+//                .entrySet().stream().filter(characterLongEntry -> characterLongEntry.getValue() > 1)
+//                .map(Map.Entry::getKey)
+//                .collect(toList());
+//
+//        System.out.println(collect);
+
+
+        //Get first repeating character
+        Optional<Map.Entry<Character, Long>> first = inputString
+                .chars()
+                .mapToObj(i -> (char) i)
+                .collect(groupingBy(Function.identity(), LinkedHashMap::new, counting()))
+                .entrySet().stream().filter(characterLongEntry -> characterLongEntry.getValue() > 1)
+                .findFirst();
+
+        System.out.println(first.get().getKey());
     }
 
     private static char findFirstRepeatingCharacterUsingJava8(String str) {

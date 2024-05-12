@@ -1,8 +1,7 @@
 package org.example;
 
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class LinkedListReverse {
 
@@ -11,9 +10,29 @@ public class LinkedListReverse {
         LinkedList<Integer> integerList = new LinkedList<>(Arrays.asList(1, 3 ,5 ,9));
         LinkedList<Integer> reverseList = new LinkedList<>();
 
-        integerList.descendingIterator().forEachRemaining(reverseList::add);
+//        Iterator<Integer> iterator = integerList.descendingIterator();
+//        while (iterator.hasNext()) {
+//            reverseList.add(iterator.next());
+//        }
 
-        System.out.println(reverseList);
+//        ListIterator<Integer> iterator = integerList.listIterator(integerList.size());
+//        while (iterator.hasPrevious()) {
+//            reverseList.add(iterator.previous());
+//        }
 
+//        integerList.descendingIterator().forEachRemaining(reverseList::add);
+
+//        Collections.reverse(integerList);
+        integerList = reverseLinkedList(integerList);
+        System.out.println(integerList);
+
+//        System.out.println(reverseList);
+
+    }
+
+    public static LinkedList<Integer> reverseLinkedList(List<Integer> linkedList) {
+        return linkedList.stream()
+                .sorted(Collections.reverseOrder())
+                .collect(Collectors.toCollection(LinkedList::new));
     }
 }

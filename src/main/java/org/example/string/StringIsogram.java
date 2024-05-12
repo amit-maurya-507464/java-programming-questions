@@ -4,6 +4,8 @@ import java.util.*;
 
 public class StringIsogram {
 
+    // An isogram is a word in which no letter is repeated
+
     public static void main(String[] args) {
 
         String string = "education";
