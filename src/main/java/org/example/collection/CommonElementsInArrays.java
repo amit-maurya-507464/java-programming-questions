@@ -1,7 +1,6 @@
-package org.example;
+package org.example.collection;
 
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
