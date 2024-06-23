@@ -47,6 +47,9 @@ public class EmployeeMapWithDepartmentExample {
         Map<String, List<Employee>> departmentMap = mapEmployeesWithDepartment(employees);
 //        Map<String, List<Employee>> departmentMap = mapEmployeesWithDepartmentWithStream(employees);
 
+        Map<Integer, String> map = mapEmployeesIdAndNameWithStream(employees);
+        System.out.println(map);
+
         // Print the result
         for (Map.Entry<String, List<Employee>> entry : departmentMap.entrySet()) {
             System.out.println("Department: " + entry.getKey());
@@ -57,6 +60,10 @@ public class EmployeeMapWithDepartmentExample {
 
     private static Map<String, List<Employee>> mapEmployeesWithDepartmentWithStream(List<Employee> employees) {
         return employees.stream().collect(Collectors.groupingBy(Employee::getDepartment));
+    }
+
+    private static Map<Integer, String> mapEmployeesIdAndNameWithStream(List<Employee> employees) {
+        return employees.stream().collect(Collectors.toMap(Employee::getId, Employee::getName));
     }
 
     private static Map<String, List<Employee>> mapEmployeesWithDepartment(List<Employee> employees) {

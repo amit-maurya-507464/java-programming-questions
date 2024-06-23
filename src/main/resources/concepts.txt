@@ -5,4 +5,13 @@
 5. http connection pooling
 6. predicate
 7. Bean scope
+8. Qualifier
+9. Multi tendency database
+10. Fault tolerance
+11. Types of constructor
+12. Types of DI
+13. Types of hibernate cache
+
+
+
 
