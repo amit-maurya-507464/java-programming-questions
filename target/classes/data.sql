@@ -2,6 +2,9 @@
 
 SELECT DISTINCT Salary FROM Employee ORDER BY Salary DESC LIMIT 1 OFFSET 1;
 
+SELECT MAX(Salary) AS SecondHighestSalary FROM Employees WHERE Salary < (SELECT MAX(Salary) FROM Employees);
+
+
 2. To find all duplicate names in a table along with their counts
 
 SELECT Name, COUNT(*) AS Count FROM Employees GROUP BY Name HAVING COUNT(*) > 1;

@@ -11,9 +11,15 @@ public class ProductOfArrayElements {
 //        printProductOfElementsExceptNumber(numbers, num);
         printProductOfElementsUsingJava8(numbers);
 //        printProductOfElementsExceptNumberUsingJava8(numbers, num);
+        printSumOfSquareOfElements(numbers);
 
         System.out.println(multiplyWithRecursion(numbers, 0));
 
+    }
+
+    private static void printSumOfSquareOfElements(int[] numbers) {
+        int sumOfProducts = Arrays.stream(numbers).map(operand -> operand * operand).reduce(0, (left, right) -> left + right);
+        System.out.println(sumOfProducts);
     }
 
     public static void printProductOfElements(int[] numbers) {
